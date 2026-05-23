@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Football 276 - Transfers</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    overflow:hidden;
+}
+
+/* ===== LOADING ===== */
+
+#loading{
+    position:fixed;
+    inset:0;
+    background:#020617;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    z-index:9999;
+}
+
+.loader{
+    display:flex;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.loader div{
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#22c55e;
+    animation:bounce 0.6s infinite alternate;
+}
+
+.loader div:nth-child(2){ animation-delay:0.2s; }
+.loader div:nth-child(3){ animation-delay:0.4s; }
+
+.text{
+    font-size:20px;
+    letter-spacing:3px;
+    color:#cbd5e1;
+}
+
+/* ===== CONTENT ===== */
+
+.content{
+    display:none;
+    padding:20px;
+    padding-bottom:110px;
+}
+
+h1,h2{
+    text-align:center;
+}
+
+hr{
+    border:1px solid rgba(255,255,255,0.1);
+    margin:15px 0;
+}
+
+h3{
+    margin:6px 0;
+}
+
+/* ===== LOWER BAR ===== */
+
+.lower-bar{
+    position:fixed;
+    bottom:15px;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:90%;
+    max-width:500px;
+
+    background:rgba(15,23,42,0.95);
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:25px;
+
+    padding:12px 10px;
+
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+.nav-btn{
+    color:#cbd5e1;
+    text-decoration:none;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    font-size:13px;
+    transition:0.3s;
+}
+
+.nav-btn:hover{
+    color:#22c55e;
+    transform:translateY(-5px);
+}
+
+.active{
+    color:#22c55e;
+}
+
+/* animation */
+@keyframes bounce{
+    from{ transform:translateY(0); opacity:0.5; }
+    to{ transform:translateY(-15px); opacity:1; }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- LOADING -->
+<div id="loading">
+
+    <div class="loader">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="text"> Wait to open ..</div>
+
+</div>
+
+<!-- CONTENT -->
+<div class="content" id="content">
+
+    <h1>Here you will know the best transfers</h1>
+
+    <hr>
+
+    <h2>Transfers News</h2>
+
+    <hr>
+     <div>
+    <h3>Player name:</h3>
+    <h3>From:</h3>
+    <h3>To :</h3>
+    <h3>Player or coach:</h3>
+    <h3> State:</h3>
+    </div>
+    <hr>
+    <div>
+     <h3>Player name:</h3>
+     <h3>From:</h3>
+      <h3>To : </h3>
+      <h3>Player or coach: </h3>
+      <h3> State: </h3>
+      </div>
+      <hr>
+    <div>
+     <h3>Player name:  </h3>
+     <h3>From: </h3>
+      <h3>To : </h3>
+      <h3>Player or coach: </h3>
+      <h3> State: </h3>
+      </div>
+      <hr>
+    <div>
+      <h3>Player name: Robert Lewandowski</h3>
+      <h3>From: Barcelona</h3>
+      <h3>To: Al-Hilal</h3>
+      <h3>Player or coach: Player</h3>
+      <h3>Status: Rumor</h3>
+    </div>
+
+    <hr>
+
+    <div>
+      <h3>Player name: Alonso</h3>
+      <h3>From: No club</h3>
+      <h3>To: Chelsea</h3>
+      <h3>Player or coach: Coach</h3>
+      <h3>Status: Real</h3>
+    </div>
+
+    <hr>
+
+    <div>
+      <h3>Player name: Michael Carrick</h3>
+      <h3>From: Manchester United</h3>
+      <h3>To: More time</h3>
+      <h3>Player or coach: Coach</h3>
+      <h3>Status: Rumor</h3>
+    </div>
+
+    <hr>
+
+    <div>
+      <h3>Player name: Mohamed Salah</h3>
+      <h3>From: Liverpool</h3>
+      <h3>To: Atlético Madrid</h3>
+      <h3>Player or coach: Player</h3>
+      <h3>Status: Rumor</h3>
+    </div>
+
+    <hr>
+
+    <div>
+      <h3>Player name: Mohamed Salah</h3>
+      <h3>From: Liverpool</h3>
+      <h3>To: Tottenham</h3>
+      <h3>Player or coach: Player</h3>
+      <h3>Status: Rumor</h3>
+    </div>
+
+</div>
+
+<!-- LOWER BAR -->
+<div class="lower-bar">
+
+    <a href="Home.html" class="nav-btn">
+        🏠
+        <span>Home</span>
+    </a>
+
+    <a href="Transferes.html" class="nav-btn active">
+        🔁
+        <span>Transfers</span>
+    </a>
+
+    <a href="News.html" class="nav-btn">
+        📰
+        <span>News</span>
+    </a>
+
+</div>
+
+<script>
+
+setTimeout(()=>{
+
+    document.getElementById("loading").style.display = "none";
+    document.getElementById("content").style.display = "block";
+    document.body.style.overflow = "auto";
+
+},3000);
+
+</script>
+
+</body>
+</html>
